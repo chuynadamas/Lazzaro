@@ -4,4 +4,6 @@
 /.swiftpm
 /*.xcodeproj
 .publish
-/Output/*
+
+#Ignore all the Output htmls files, this is only for testing purposes.
+/Output
