@@ -17,7 +17,7 @@ struct Lazzaro: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://chuynadamas.com")!
+    var url = URL(string: "https://chuynadamas.github.io/chuynadamas/")!
     var name = "ChuyNadaMas - Project Lazaro"
     var description = "This is the lazaro project, the blog who return from dead"
     var language: Language { .english }
