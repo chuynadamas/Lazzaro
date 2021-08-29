@@ -18,7 +18,7 @@ struct Lazzaro: Website {
 
     // Update these properties to configure your website:
     var url = URL(string: "https://chuynadamas.github.io/chuynadamas/")!
-    var name = "ChuyNadaMas - Project Lazaro"
+    var name = "ChuyNadaMas's Personal Blog"
     var description = "This is the lazaro project, the blog who return from dead"
     var language: Language { .english }
     var imagePath: Path? { nil }
@@ -27,8 +27,8 @@ struct Lazzaro: Website {
 
 // This will generate your website using the built-in Foundation theme:
 try Lazzaro().publish(
-    withTheme: .lazzaro,
-    deployedUsing: .gitHub("chuynadamas/chuynadamas", useSSH: true)
+    withTheme: .foundation,
+    deployedUsing: .gitHub("chuynadamas/chuynadamas", branch: "pages", useSSH: true)
 )
 
 
