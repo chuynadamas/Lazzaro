@@ -28,7 +28,7 @@ struct Lazzaro: Website {
 // This will generate your website using the built-in Foundation theme:
 try Lazzaro().publish(
     withTheme: .foundation,
-    deployedUsing: .gitHub("chuynadamas/chuynadamas", branch: "pages", useSSH: true)
+    deployedUsing: .gitHub("chuynadamas/mediocrates", useSSH: true)
 )
 
 
