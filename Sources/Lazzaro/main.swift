@@ -1,6 +1,7 @@
 import Foundation
 import Publish
 import Plot
+import AppKit
 
 // This type acts as the configuration for your website.
 struct Lazzaro: Website {
@@ -26,9 +27,18 @@ struct Lazzaro: Website {
 }
 
 // This will generate your website using the built-in Foundation theme:
-try Lazzaro().publish(
-    withTheme: .lazzaro,
-    deployedUsing: .gitHub("chuynadamas/mediocrates", useSSH: true)
-)
+try Lazzaro().publish(using: [
+    .copyResources(),
+    .addMarkdownFiles(),
+    .sortItems(by: \.date, order: .descending),
+    .generateHTML(withTheme: .lazzaro),
+    .generateSiteMap(),
+    .deploy(using: .gitHub("chuynadamas/mediocrates", useSSH: true))
+])
+
+//try Lazzaro().publish(
+//    withTheme: .lazzaro,
+//    deployedUsing: .gitHub("chuynadamas/mediocrates", useSSH: true)
+//)
 
 
