@@ -33,7 +33,7 @@ try Lazzaro().publish(using: [
     .sortItems(by: \.date, order: .descending),
     .generateHTML(withTheme: .lazzaro),
     .generateSiteMap(),
-    .deploy(using: .gitHub("chuynadamas/mediocrates", useSSH: true))
+    .deploy(using: .gitHub("chuynadamas/blog", useSSH: true))
 ])
 
 //try Lazzaro().publish(
