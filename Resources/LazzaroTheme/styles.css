@@ -4,6 +4,26 @@
 *  MIT license, see LICENSE file for details
 */
 
+/* Fonts */
+
+@font-face {
+    font-family: "Main";
+    src: url(/fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Main";
+    src: url(/fonts/SourceSansPro-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Code";
+    src: url(/fonts/SourceCodePro-Regular.ttf);
+}
+
+/* HTML */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +33,7 @@
 body {
     background: #fff;
     color: #000;
-    font-family: Helvetica, Arial;
+    font-family: "Main";
     text-align: center;
 }
 
@@ -168,3 +188,44 @@ footer {
     }
 }
 
+
+/* Splash Theme */
+pre code {
+    color: #A9BCBC;
+}
+
+.preprocessing {
+    color: #B68A00;
+}
+
+.comment {
+    color: #6B8A94;
+}
+
+.number {
+    color: #DB6F57;
+}
+
+.call {
+    color: #348FE5;
+}
+
+.property {
+    color: #21AB9D;
+}
+
+.keyword {
+    color: #E83B8E;
+}
+
+.dotAccess {
+    color: #92B300;
+}
+
+.type {
+    color: #8281CA;
+}
+
+.string {
+    color: #FA641E;
+}

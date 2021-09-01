@@ -13,4 +13,14 @@ My first post's text.
 
 ```swift
 let man = soldTheWorld()
+
+
+while i = 10 
+while i > 0 {
+    print("\(i)...")
+    i -= 1
+}
+print("Blast off!")
 ```
+
+

@@ -2,6 +2,7 @@ import Foundation
 import Publish
 import Plot
 import AppKit
+import SplashPublishPlugin
 
 // This type acts as the configuration for your website.
 struct Lazzaro: Website {
@@ -29,9 +30,16 @@ struct Lazzaro: Website {
 // This will generate your website using the built-in Foundation theme:
 try Lazzaro().publish(using: [
     .copyResources(),
+    .installPlugin(.splash(withClassPrefix: "")),
     .addMarkdownFiles(),
     .sortItems(by: \.date, order: .descending),
     .generateHTML(withTheme: .lazzaro),
+    .unwrap(RSSFeedConfiguration.default) { config in
+        .generateRSSFeed(
+            including: [.posts],
+            config: config
+        )
+    },
     .generateSiteMap(),
     .deploy(using: .gitHub("chuynadamas/blog", useSSH: true))
 ])
