@@ -140,6 +140,15 @@ a {
     text-decoration: none;
 }
 
+/*Article tag color*/
+.tags .variant-a, .tag.variant-a {
+    background-color: #ca4a44;
+}
+/*Assembly tag color*/
+.tags .variant-b, .tag.variant-b {
+    background-color: #3b5987;
+}
+
 .item-page .tag-list {
     display: inline-block;
 }
@@ -162,6 +171,15 @@ a {
 footer {
     color: #8a8a8a;
 }
+
+/*Articles*/
+article h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    line-height: 1.2em;
+    max-width: 95%;
+}
+
 
 @media (prefers-color-scheme: dark) {
     body {
