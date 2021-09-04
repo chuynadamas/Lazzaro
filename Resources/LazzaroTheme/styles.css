@@ -188,10 +188,18 @@ footer {
     }
 }
 
-
 /* Splash Theme */
 pre code {
+    display: block;
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    border-radius: 12px;
     color: #A9BCBC;
+    line-height: 1.4em;
+    font-size: 0.95em;
+    overflow-x: auto;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
 }
 
 .preprocessing {
