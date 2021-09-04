@@ -9,7 +9,7 @@ My first post's text.
 
 > The man who sold the world
 
-## This is the man who sold the world 
+## This is the man who sold the world
 
 ```swift
 let man = soldTheWorld()
@@ -22,5 +22,4 @@ while i > 0 {
 }
 print("Blast off!")
 ```
-
 
