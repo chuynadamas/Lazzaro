@@ -14,7 +14,7 @@ extension Theme where Site == Lazzaro {
     static var lazzaro: Self {
         Theme(
             htmlFactory: LazzaroHTMLFactory(),
-            resourcePaths: ["Resources/LazzaroTheme/styles.css",
+            resourcePaths: ["Resources/theme/styles.css",
                             "Resources/fonts/SourceCodePro-Regular.ttf",
                             "Resources/fonts/SourceSansPro-Bold.ttf",
                             "Resources/fonts/SourceSansPro-Regular.ttf"]

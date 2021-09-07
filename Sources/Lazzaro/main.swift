@@ -24,6 +24,7 @@ struct Lazzaro: Website {
     var description = "This is the lazaro project, the blog who return from dead"
     var language: Language { .english }
     var imagePath: Path? { nil }
+    var favicon: Favicon? { .init(path: Path("images/asteroid.ico"), type: "image/x-icon") }
     
 }
 
@@ -43,10 +44,5 @@ try Lazzaro().publish(using: [
     .generateSiteMap(),
     .deploy(using: .gitHub("chuynadamas/blog", useSSH: true))
 ])
-
-//try Lazzaro().publish(
-//    withTheme: .lazzaro,
-//    deployedUsing: .gitHub("chuynadamas/mediocrates", useSSH: true)
-//)
 
 

@@ -1,6 +1,6 @@
 ---
 date: 2021-08-28 21:39
-description: How to do a hello world in assambler for M1 Mac
+description: How to do a hello world in assambler for M1 Mac 💻
 tags: Article, Assembly
 ---
 
