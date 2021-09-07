@@ -148,6 +148,11 @@ a {
 .tags .variant-b, .tag.variant-b {
     background-color: #3b5987;
 }
+/*Swift tag color*/
+.tags .variant-c, .tag.variant-c {
+    background-color: #db8b2a;
+}
+
 
 .item-page .tag-list {
     display: inline-block;

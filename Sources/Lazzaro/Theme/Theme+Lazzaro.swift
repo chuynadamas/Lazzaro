@@ -115,7 +115,7 @@ private struct LazzaroHTMLFactory<Lazzaro: Website>: HTMLFactory {
                                  url: context.site.path(for: tag).absoluteString
                             )
                         }
-                        .class("tag \(Utils.tagVariants[tag.string] ?? "")")
+                        .class("tag \(Utils.tagVariants[safeKey: tag.string])")
                     }
                     .class("all-tags")
                 }
@@ -134,7 +134,8 @@ private struct LazzaroHTMLFactory<Lazzaro: Website>: HTMLFactory {
                 Wrapper {
                     H1 {
                         Text("Tagged with ")
-                        Span(page.tag.string).class("tag")
+                        Span(page.tag.string)
+                            .class("tag \(Utils.tagVariants[safeKey: page.tag.string])")
                     }
 
                     Link("Browse all tags",
@@ -220,7 +221,7 @@ private struct ItemTagList<Site: Website>: Component {
         List(item.tags) { tag in
             ListItem {
                 Link(tag.string, url: site.path(for: tag).absoluteString)
-            }.class("tag \(Utils.tagVariants[tag.string] ?? "")")
+            }.class("tag \(Utils.tagVariants[safeKey: tag.string])")
         }
         .class("tag-list")
     }
@@ -243,6 +244,7 @@ private struct SiteFooter: Component {
 private struct Utils {
     static let tagVariants = [
         "Article" : "variant-a",
-        "Assembly" : "variant-b"
+        "Assembly" : "variant-b",
+        "Swift": "variant-c"
     ]
 }
