@@ -1,10 +1,10 @@
 ---
 date: 2021-09-06 21:39
-description: Subsctipt a dictionary? - No problem ☄️
+description: How to subscript a dictionary in Swift  ☄️
 tags: Article, Swift
 ---
 
-# Subscript a Dictonary in swift
+# Subscript a Dictonary in Swift
 
 ## The power of subscription in swift
 
