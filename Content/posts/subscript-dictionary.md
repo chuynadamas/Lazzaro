@@ -1,6 +1,6 @@
 ---
 date: 2021-09-06 21:39
-description: Subsctipt a dictionary? - No problem 🧨
+description: Subsctipt a dictionary? - No problem ☄️
 tags: Article, Swift
 ---
 
