@@ -153,6 +153,11 @@ a {
     background-color: #db8b2a;
 }
 
+/*Terminal tag color*/
+.tags .variant-d, .tag.variant-d {
+    color: black;
+    background-color: #40c276;
+}
 
 .item-page .tag-list {
     display: inline-block;
@@ -185,6 +190,30 @@ article h1 {
     max-width: 95%;
 }
 
+/*Table*/
+.lzz-table {
+    color: #fff;
+    display: block;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    line-height: 1.4em;
+    font-size: 0.95em;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.lzz-tr {
+    border-color: lighten(#34495E, 10%);
+}
+
+.lzz-th, td {
+    margin: .5em 1em;
+    padding: 1em !important;
+}
+
+.lzz-th, td:before {
+    color: #dd5;
+}
 
 @media (prefers-color-scheme: dark) {
     body {

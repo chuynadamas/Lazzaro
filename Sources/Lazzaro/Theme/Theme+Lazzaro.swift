@@ -245,6 +245,7 @@ private struct Utils {
     static let tagVariants = [
         "Article" : "variant-a",
         "Assembly" : "variant-b",
-        "Swift": "variant-c"
+        "Swift": "variant-c",
+        "Terminal" : "variant-d"
     ]
 }
