@@ -78,11 +78,22 @@ commands that I use almost everyday.
     <td class="lzz-td">Local files to commit</td>
   </tr>
 </table>
- 
+
+<br/>
+
 There are plenty of them, but also you can create new ones open your `.zshrc` file and adding all the alieases that you want in the following format
-`alias [name]='[command]'`
+
+<br/>
+
+```swift
+alias [name]="[command]"
+```
+
+<br/>
 
 Let see an example with some of my personal aliases
+
+<br/>
 
 ```swift
 alias glog="git log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s'"
@@ -92,5 +103,14 @@ alias gconflict="git diff --diff-filter=U"
 alias gconflict="git diff --name-only --diff-filter=U"
 ```
 
+<br/>
+<br/>
+
 Once you add all the alias that you need, you have to reload the source of your terminal with `source ~/.zshrc` and then you are ready to go! 🐱 && 🐙
 
+<br/>
+
+> Space: the final frontier.  These are the voyages of the starship Enterprise.
+Its five-year mission: to explore strange new worlds; to seek out new life
+and new civilizations; to boldly go where no man has gone before. 
+>  -- <cite>Captain James T. Kirk</cite>

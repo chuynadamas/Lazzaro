@@ -215,6 +215,16 @@ article h1 {
     color: #dd5;
 }
 
+/*Quotes*/
+blockquote p {
+    position: relative;
+    background-color: #efefef;
+    padding: 10px 10px 10px 15px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left: 4px solid #ff644e;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #222;
@@ -231,6 +241,10 @@ article h1 {
 
     header {
         background-color: #000;
+    }
+
+    article p.info, blockquote p {
+        background-color: #101010;
     }
 }
 
