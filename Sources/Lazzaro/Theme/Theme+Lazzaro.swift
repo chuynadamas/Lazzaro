@@ -33,8 +33,7 @@ private struct LazzaroHTMLFactory<Lazzaro: Website>: HTMLFactory {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Wrapper {
                     H1(index.title)
-                    Paragraph(context.site.description)
-                        .class("description")
+                    Paragraph(context.site.description).class("description")
                     H2("Latest content")
                     ItemList(
                         items: context.allItems(

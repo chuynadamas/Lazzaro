@@ -9,9 +9,9 @@ struct Lazzaro: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case posts
-        case apps
-        case about
-        case resume
+        //case apps
+        //case about
+        //case resume
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
@@ -21,11 +21,10 @@ struct Lazzaro: Website {
     // Update these properties to configure your website:
     var url = URL(string: "https://chuynadamas.github.io/chuynadamas/")!
     var name = "ChuyNadaMas's Personal Blog"
-    var description = "This is the lazaro project, the blog who return from dead"
+    var description = "Some note for my personal purposes"
     var language: Language { .english }
     var imagePath: Path? { nil }
     var favicon: Favicon? { .init(path: Path("images/asteroid.ico"), type: "image/x-icon") }
-    
 }
 
 // This will generate your website using the built-in Foundation theme:
