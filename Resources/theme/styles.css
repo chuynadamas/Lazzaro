@@ -222,7 +222,7 @@ blockquote p {
     padding: 10px 10px 10px 15px;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
-    border-left: 4px solid #ff644e;
+    border-left: 4px solid #e7eb21;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -252,6 +252,22 @@ blockquote p {
     .wrapper {
         padding: 40px 20px;
     }
+}
+
+/*Disclaimer theme*/
+.disclaimer {
+    color: #000;
+    display: block;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 22px;
+    border-radius: 8px;
+    border: 2px solid #ff5e4f;
+    background-color: #ffbeb8;
+    padding: 10px 10px 8px 12px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    text-decoration: none;
 }
 
 /* Splash Theme */
