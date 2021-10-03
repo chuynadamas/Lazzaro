@@ -159,6 +159,11 @@ a {
     background-color: #40c276;
 }
 
+/*Combine tag color*/
+.tags .variant-e, .tag.variant-e {
+    background-color: #c468e3;
+}
+
 .item-page .tag-list {
     display: inline-block;
 }

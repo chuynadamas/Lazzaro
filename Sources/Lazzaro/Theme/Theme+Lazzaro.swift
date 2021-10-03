@@ -245,6 +245,7 @@ private struct Utils {
         "Article" : "variant-a",
         "Assembly" : "variant-b",
         "Swift": "variant-c",
-        "Terminal" : "variant-d"
+        "Terminal" : "variant-d",
+        "Combine" : "variant-e"
     ]
 }
