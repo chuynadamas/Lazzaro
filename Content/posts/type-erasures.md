@@ -135,6 +135,51 @@ class AnyDataStore<StoredType>: DataStore {
   }
 }
 ```
+<br/>
+This example defines a `DataStore` protocol and a type erasing wrapper called `AnyDataStore`. The purpose of the `AnyDataStore` is to provide an abstraction that hides the underlying data store entirely. Much like `Combine` `AnyPublisher`. The `AnyDataStore` object makes extensive use of generics, 
+<br/>
+The `AnyDataStore` itself is generic over `StoredType`. This is the type of object that the undelying `DataStore` stores. The initializer for `AnyDataStore` is generic over `Store` where `Store` conforms to `DataStore` and the objects that are stored in the `Store` must match the objects stored by the `AnyDataStore`. Due to the way this wrapper is set up that should always be the case but Swift requires us to be explicit.
+<br/>
+We want forward any calls on `AnyDataStore` to the wrapped store. but we can't hold in tothe wrapped store since that would require making `AnyDataStore` generic over the underlying datastore. Instead, we capture references to the method we need in the `storeObject` and `fetchObject` propeerties and forward any calls to `store(_:forKey:)` and `fetchObject(forKey:)` to their respective stores references.
+<br/>
+```swift
+class InMemoryImageStore: DataStore {
+  var images = [String: UIImage]()
+
+  func store(_ object: UIImage, forKey key: String) {
+    images[key] = object
+  }
+
+  func fetchObject(forKey key: String) -> UIImage? {
+    return images[key]
+  }
+}
+
+struct FileManagerImageStore: DataStore {
+  typealias StoredType = UIImage
+
+  func store(_ object: UIImage, forKey key: String) {
+    // write image to file system
+  }
+
+  func fetchObject(forKey key: String) -> UIImage? {
+    return nil // grab image from file system
+  }
+}
+
+class StorageManager {
+  func preferredImageStore() -> AnyDataStore<UIImage> {
+    if Bool.random() {
+      let fileManagerStore = FileManagerImageStore()
+      return AnyDataStore(wrappedStore: fileManagerStore)
+    } else {
+      let memoryStore = InMemoryImageStore()
+      return AnyDataStore(wrappedStore: memoryStore)
+    }
+  }
+}
+```
+
 
 
 
