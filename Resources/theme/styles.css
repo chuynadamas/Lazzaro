@@ -220,6 +220,15 @@ article h1 {
     color: #dd5;
 }
 
+/*List elements*/
+.ul-normal {
+    padding-left: 20px;
+}
+
+.li-normal {
+    margin-left: 25px;
+}
+
 /*Quotes*/
 blockquote p {
     position: relative;

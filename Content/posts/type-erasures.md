@@ -77,19 +77,20 @@ If you use `Combine`, you will encounter `AnyCancellable` when you subscribe to 
 Without going too much detail, Combine has a protocol called `Cancellable`. This protocol requires that conforming objects implement a `cancel` method that can be called to cancel a subscription to a publisher's output. Combine provides three objects that conform to `Cancellable:`
 <br/>
 
-- `AnyCancellable`
-- `Suscribers.Assugn`
-- `Subscribers.Sink`
+<ul class="ul-normal">
+    <li class="li-normal">AnyCancellable</li>
+    <li class="li-normal">Suscribers.Assign</li>
+    <li class="li-normal">Subscribers.Sink</li>
+</ul>
 
 <br/>
 
 The `Assign` and `Sink` subscribrers match up with two of `Publishers`'s methods:
-
 <br/>
-
-- `assign(to:on:)`
-- `sink(receiveCompletion:receiveValue)`
-
+<ul class="ul-normal">
+    <li class="li-normal">assign(to:on:)</li>
+    <li class="li-normal">sink(receiveCompletion:receiveValue)</li>
+</ul>
 <br/>
 These two methods both return `AnyCancellable` instances rather than `Subscribers.Assign` and `Subscribers.Sink`. Apple could have chosen to make both of these methods return `Cancellable` instead of `AnyCancellable`.
 <br/>
@@ -179,8 +180,29 @@ class StorageManager {
   }
 }
 ```
+In the code snippet above There is two different data stores and `StoreManager` that is responsible for providing a preffered storage solution. Since the `StorageManager` decides which storage we want to use it returns an `AnyDataStore` that's generic over `UIImage` object.
+<br/>
+The example of AnyDataStore is very similar to the `AnyPublisher` scenario that is described in the previous section. It's pretty complex but it's good to know this exists and how it (possibly) looks under the hood.
+<br/>
+In the previous section, is mentioned `AnyCancellable`. An object like that is much simpler to recreate because it doesn't involve any generics or associated types. Let's try to create something similar except this version will be called `AnyPersistable:`
+<br/>
+```swift
+protocol Persistable {
+  func persist()
+}
 
+class AnyPersistable: Persistable {
+  private let wrapped: Persistable
 
+  init(wrapped: Persistable) {
+    self.wrapped = wrapped
+  }
 
-
+  func persist() {
+    wrapped.persist()
+  }
+}
+```
+<br/>
+An abstraction like the one I showed could be useful if you're dealing with a whole bunch of objects that need to be persisted but you want to hide what these objects really are. Since there are no complicated generics involved in this example it's okay to hold on to the `Persistable` object that's wrapped by `AnyPersistable`.
 
