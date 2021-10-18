@@ -78,9 +78,9 @@ Without going too much detail, Combine has a protocol called `Cancellable`. This
 <br/>
 
 <ul class="ul-normal">
-    <li class="li-normal">AnyCancellable</li>
-    <li class="li-normal">Suscribers.Assign</li>
-    <li class="li-normal">Subscribers.Sink</li>
+    <li class="li-normal"><code>AnyCancellable</code></li>
+    <li class="li-normal"><code>Suscribers.Assign</code></li>
+    <li class="li-normal"><code>Subscribers.Sink</code></li>
 </ul>
 
 <br/>
@@ -88,15 +88,14 @@ Without going too much detail, Combine has a protocol called `Cancellable`. This
 The `Assign` and `Sink` subscribrers match up with two of `Publishers`'s methods:
 <br/>
 <ul class="ul-normal">
-    <li class="li-normal">assign(to:on:)</li>
-    <li class="li-normal">sink(receiveCompletion:receiveValue)</li>
+    <li class="li-normal"><code>assign(to:on:)</code></li>
+    <li class="li-normal"><code>sink(receiveCompletion:receiveValue)</code></li>
 </ul>
 <br/>
 These two methods both return `AnyCancellable` instances rather than `Subscribers.Assign` and `Subscribers.Sink`. Apple could have chosen to make both of these methods return `Cancellable` instead of `AnyCancellable`.
 <br/>
 
 But they didn't
-
 
 <br/>
 
@@ -180,6 +179,7 @@ class StorageManager {
   }
 }
 ```
+<br/>
 In the code snippet above There is two different data stores and `StoreManager` that is responsible for providing a preffered storage solution. Since the `StorageManager` decides which storage we want to use it returns an `AnyDataStore` that's generic over `UIImage` object.
 <br/>
 The example of AnyDataStore is very similar to the `AnyPublisher` scenario that is described in the previous section. It's pretty complex but it's good to know this exists and how it (possibly) looks under the hood.
