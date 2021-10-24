@@ -59,6 +59,6 @@ Just directly without using any `guard` of `if let` logic. This is faster, but a
 that all the values that you'll use have to be in your ditionary in other case you won't have a crash... Yes, sometimes crash are good, they can 
 help us to find some holes in our code. 
 <br/>
-With great power comes great responsibility -- Uncle Ben 🕸
+> With great power comes great responsibility -- Uncle Ben 🕸
 
 

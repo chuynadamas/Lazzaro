@@ -97,9 +97,12 @@ struct ViewModelGenerator {
 <br/>
 By using the `some` keyword, the compiler can enforce a couple of things while hiding them from the caller of `listProvides(for:)`:
 <br/>
-- We return something that conforms to `ListDataSource`
-- The returned object's associated type matches any requirements that are set by `ListDataSource`
-- We always return the same type from `listProvider(for:)`
+<ul class="ul-normal">
+    <li class="li-normal">We return something that conforms to<code>ListDataSource</code></li>
+    <li class="li-normal">The returned object's associated type matches any requirements that are set by<code>ListDataSource</code></li>
+    <li class="li-normal">We always return the same type from<code>listProvider(for:)</code></li>
+</ul>
+
 <br/>
 <br/>
 
